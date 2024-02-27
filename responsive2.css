@@ -1,0 +1,249 @@
+@media (max-width:1023px) and (min-width:992px){
+    .mainbox{
+        padding: 0;
+    }
+
+    /* navbar start  */
+    .logo-container h1{
+        font-size: 30px;
+    }
+    .logo-image{
+        width: 50px;
+        height: 50px;
+        top: -5px;
+    }
+    .left-navbar ul{
+        font-size: 10px;
+    }
+    .left-navbar ul li{
+        padding: 4px 0px;
+    }
+    .middle-navbar .div button{
+        font-size: 12px;
+        padding: 6px 6px;
+    }
+    .middle-navbar{
+        margin-top: 0px;
+    }
+    .middle-navbar .div button{
+        margin-top: 10px;
+    }
+    .middle-navbar ul{
+        margin-top: 6px;
+    }
+    .middle-navbar ul{
+        margin-bottom: 0;
+   
+    }
+    .middle-navbar ul li{
+        font-size: 12px;
+        padding: 5px 1px;
+    }
+    .right-navbar img{
+        width: 100px;
+    }
+    .right-navbar .text p{
+        font-size: 16px;
+    }
+    .right-navbar .text h5{
+        font-size: 16px;
+        margin-top: 0;
+        
+    }
+
+    /* navbar ends  */
+
+    /* top boxes start  */
+    .test{
+        background: none;
+        height: auto;
+    }
+    .boxes-container .boxes .box1{
+background-color: #2dbf16;
+}
+.boxes-container .boxes .box2{
+    background-color: #f70065;
+}
+.boxes-container .boxes .box3{
+    background-color: #544e9f;
+}
+.boxes-container .boxes .box4{
+    background-color: #0075d5;
+}
+.boxes-container .boxes .box5{
+    background-color: #fcac2a;
+}
+.boxes-container >div{
+    gap: 0;
+    padding: 0;
+    margin-top: 0px;
+
+}
+.boxes-container .boxes >div{
+    width: 22%;
+    
+    padding: 35px 6px 20px 6px;
+}
+.boxes-container .boxes div .dots-box{
+    height: 8px;
+}
+.boxes-container .boxes div .dots-box span{
+    margin-top: 0;
+}
+.number-box .upper h5{
+    width: 65px;
+    margin-right: 1px;
+    padding-top: 10px;
+    
+}
+.number-box .upper h6{
+    font-size: 10px;
+    width: 70%;
+    
+}
+.number-box .upper h5 sup{
+    font-size: 24px;
+    top: 14px;
+}
+.number-box .upper h5 span{
+    font-size: 34px;
+    padding-left: 12px;
+    top: -5px;
+}
+.number-box .upper .extra2{
+    font-size: 16px;
+    right: 10%;
+    top: 8px;
+}
+.number-box .middle{
+    margin-top: 0;
+}
+.number-box .middle h5{
+    margin-top: 37px;
+    font-size: 34px;
+}
+.number-box .middle .extra{
+    margin-left: -10px;
+}
+.number-box .middle sup{
+    font-size: 16px;
+    right: 10px;
+    top: -14px;
+}
+.inner .bottom-text{
+    margin-bottom: 2px;
+    padding: 0;
+}
+.inner .bottom-text p{
+    font-size: 9px;
+}
+
+
+/* boxes end  */
+/* boxes popup-inner  */
+.popup-inner{
+    width: 93%!important;
+    top: 30px;   
+}
+/* landing popup  */
+.landing-popup{
+    width: 100%;
+    left: 0;
+    top: 40px;
+}
+.text1 p:last-child{
+    /* background-color: red; */
+    font-size: 20px;
+    margin-top: 5px;
+}
+.flatpickr-calendar{
+    width: 100%!important;
+}
+
+/* charts section start  */
+.charts-section .charts{
+    background: #333b52;
+}
+.charts-container{
+    flex-direction: column;
+    background-image: none;
+   
+}
+.charts-container .left-element{
+    margin: auto;
+    padding-left: 0px;
+}
+.charts-container .right-element{
+    /* background-color: red; */
+    position: relative;
+    width: 100%;
+}
+.charts-container .right-element .first-element {
+    padding-left: 30px;
+}
+.charts-container .right-element .first-element div{
+    justify-content: flex-start;
+}
+.charts-container .right-element .third-element{
+top: 95px;
+background-image: url(http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/grp.jpg);
+background-size: 116% 122%;
+background-position: 0 8%;
+
+}
+.charts-container .right-element .second-element{
+top: 280px;
+z-index: 10;
+}
+
+/* links styling starts  */
+
+.links-section{
+    top: 202px;
+    padding-top: 45px;
+    position: relative;
+}
+.style-pages .header-text h1{
+    margin-left: 14px;
+    font-size: 30px;
+}
+.style-pages .chat-container{
+    padding: 0px 0px 0px 17px;
+}
+.chat-container .fade-right p,.chat-container .fade-left p {
+    padding: 25px 25px 25px 25px;
+    font-size: 14px;
+    margin-top: 50px;
+}
+.chat-container .fade-left{
+    margin-left: 30px;
+   
+}
+.links-container .left-box{
+    width: 39%;
+}
+.style-pages .image-container{
+    padding-bottom: 220px;
+}
+.links-container .right-box{
+    padding-bottom: 320px;
+  
+}
+.links-container .right-box .main-items{
+top: 215px;
+}
+.main-items .items-container .header-text h1{
+    text-align: left;
+    margin-left: 14px;
+    font-size: 30px;
+}
+.items-container .add-more{
+    padding-top: 10px;
+}
+
+.fifth-list ul{
+    width: 75%;
+}
+
+
+}

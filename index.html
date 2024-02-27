@@ -1,0 +1,3068 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCTE.Cable Co</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="top-boxes.css">
+    <link rel="stylesheet" href="charts.css">
+    <link rel="stylesheet" href="links.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="extraresponsive.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="responsive2.css">
+    <link rel="stylesheet" href="responsive3.css">
+    <link rel="stylesheet" href="responsive4.css">
+    <link rel="stylesheet" href="responsive5.css">
+    <link rel="stylesheet" href="responsive6.css">
+    <link rel="stylesheet" href="responsive7.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <!-- element 2 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+     <!-- Include Flatpickr CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <!-- Include Flatpickr JavaScript and Moment.js -->
+     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+     <script src="https://cdn.jsdelivr.net/npm/moment"></script>
+
+
+     
+
+     <style>
+      .flatpickr-calendar {
+    background-color:rgba(45, 191, 22, 0.9); /* Adjust the background color as needed */
+    color: #fff; /* Adjust the text color as needed */
+    width: 220px;
+    margin-left: -5px;
+    animation: rollIn 1s ease-out;
+}
+.box2 .flatpickr-calendar{
+  background-color: #f70065;
+}
+.box3 .flatpickr-calendar{
+  background-color: #544e9f;
+}
+.box4 .flatpickr-calendar{
+  background-color: #0075d5;
+}
+.box5 .flatpickr-calendar{
+  background-color: #fcac2a;
+}
+        .flatpickr-current-month {
+            font-size: 13px; /* Adjust the font size as needed */
+        }
+     </style>
+   
+
+  </head>
+  <body>
+    <section class="mainbox">
+      
+      <section class="head">
+        <div class="navbar-container">
+          <div class="navbar">
+            <div class="left-navbar">
+              <div class="logo-container">
+                <h1>CableCo</h1>
+                <div class="logo-image">
+                  <img
+                    src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/src.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <ul>
+                <li>HOME</li>
+                <li>COURSEWORK</li>
+                <li>CERTIFICATION</li>
+              </ul>
+            </div>
+            <div class="middle-navbar">
+              <div class="middle-navbar-inner">
+                <a type="button" class="click" id="toggleButton"> <i class="fa fa-bars"></i></a>
+                <div class="mybox">
+              <div class="div"><button>Dashboard</button></div>
+              <ul id="middlenavbar">
+                <li>Change Setting</li>
+                <li>Export / Share</li>
+                <li>Support / FAQs</li>
+                <li>Log Out</li>
+              </ul>
+            </div></div></div>
+            <div class="right-navbar">
+              <img
+                src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/text.png"
+                alt=""
+              />
+              <a type="button" class="arrow-click" id="toggleButton2"><i class="fa fa-angle-down"></i></a>
+              <div class="text" id="rightnavbar">
+                <p>Company View</p>
+                <h5>Home</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- boxes section  start -->
+        
+  <div class="boxes-container test">
+    <div class="boxes">
+      <div class="box1">
+        <div class="clickbox-icon" id="boxdiv1" onclick="toggleDivs()">
+          <h6> Course performance</h6>
+          <i class="fa fa-angle-up"></i>
+        </div>
+        <div id="boxdiv2" class="boxhidden">
+        <div class="inner "  >
+          <div class="popup-inner" id="popup">
+            <div>
+              <div class="icon_close" >
+              <i class='bx bx-x fa-2x fa' onclick="hideDiv('popup')"></i></div>
+            </div>
+            <div><p>Indicates average performance in courses that are passed by team members</p></div>
+          </div>
+        <div class="dots-box">
+          <div onclick="showDiv('popup')">
+          <span></span>
+          <span></span>
+          <span></span></div>
+          <div></div>
+          <i class="fa fa-angle-down" onclick="toggleDivs2()"></i>
+        </div>
+        <div class="number-box" onclick="showbox('popupbox1')" >
+      <div class="upper">
+        <h6>Course Performance</h6>
+        <h5>
+          <sup>+</sup>
+          <span>0</span>
+          <span class="extra">.1</span>
+          <sup class="extra2">%</sup>
+        </h5>
+      </div>
+      <div class="middle">
+        <h5>
+          <span>87</span>
+          <span class="extra">.9</span>
+          <sup>%</sup>
+        </h5>
+      </div>
+      <div class="bottom-text">
+        <div><p>Company Avg Score Vs Others</p></div>
+        <div>
+          <img
+            src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/arrow_up.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div></div>
+    <div class="landing-popup" id="popupbox1">
+      <div class="outer-container">
+        <div class="text-upper">
+          <i class="bx bx-x fa-2x fa" aria-hidden="true" onclick="hidebox('popupbox1')"></i>
+          <h6>Course Performance</h6>
+          
+        </div>
+        <div class="calender-text">
+          <div class="item-1">
+            <div class="text1" onclick="toggleContainer('container1-1')">
+              <p>Period Begins</p>
+              <p>10.15.17 </p>
+            </div>
+            <div class="container1 showitem"  id="container1-1">
+              <div class="datepicker"></div>
+            </div>
+          </div>
+          <div class="item-2" id="shiftbox">
+            <div class="text1" onclick="toggleContainer('container1-2')">
+              <p>Period Ends</p>
+              <p>10.15.18 </p>
+            </div>
+            <div class="container1 showitem"  id="container1-2">
+              <div class="datepicker"></div>
+            </div>
+          </div>
+          <div class="item-3">
+<div class="top-performer" onclick="toggleContainer('container1-3')"><p>Top Performers</p></div>
+<div class="performer-container showitem"  id="container1-3">
+<ul>
+  <li>
+    <div class="profile-list">
+    <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+    <div><p class="txt">Ryan Grubb</p></div>
+    <div class="inner-container">
+      <div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</li>
+  <li>
+    <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Andrew LaPine</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+<div>
+  <div class="next-seven" id="hidden-div1">
+    <ul>
+    <li class="green-color"> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li class="green-color"> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li class="green-color"> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li class="green-color"> 
+      <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </li>
+  </ul></div>
+  <ul>
+    <li class="green-color view-all">
+      <div class="profile-list" onclick="showDiv1('hidden-div1')">
+        <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/download.png" alt=""></div>
+        <div><p class="txt">View All Top Performers</p></div>
+        <div class="inner-container">
+          <div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  
+</div>
+</div>
+
+
+          </div>
+          <div class="item-4">
+            <ul onclick="toggleContainer('container1-4')">
+              <li class="chat-view">Chat View</li>
+            </ul>
+        
+            <div class="graph-container showitem" id="container1-4">
+              <ul>
+                <li>
+                  <span>10.15.17 </span>
+                  <span>10.15.18</span>
+                </li>
+              </ul>
+            </div>
+          
+          </div>
+          <div class="item-5">
+            <ul onclick="toggleContainer('container1-5')"><li>Customize My Views</li></ul>
+          </div>
+        </div>
+      </div>
+    </div></div>
+      </div>
+      <div class="box2">
+        <div class="clickbox-icon" id="boxdiv3" onclick="toggleDivs3()">
+          <h6> Certification performance</h6>
+          <i class="fa fa-angle-up"></i>
+        </div>
+        <div id="boxdiv4" class="boxhidden">
+        <div class="inner">
+          <div class="popup-inner" id="popup2">
+            <div>
+              <div class="icon_close" >
+              <i class='bx bx-x fa-2x fa' onclick="hideDiv('popup2')"></i></div>
+            </div>
+            <div><p>Certifications completed from within total certifications attempted by team members of this company.</p></div>
+          </div>
+        <div class="dots-box">
+          <div onclick="showDiv('popup2')">
+            <span></span>
+            <span></span>
+            <span></span></div>
+            <div><i class="fa fa-exclamation-triangle"  onclick="showDiv('popup2')"></i>
+            <i class="fa fa-angle-down" onclick="toggleDivs4()"></i></div>
+        </div>
+        <div class="number-box" onclick="showbox('popupbox2')">
+      <div class="upper">
+        <h6>Certification Performance</h6>
+        <h5>
+          <sup>-</sup>
+          <span>2</span>
+          <span class="extra">.1</span>
+          <sup class="extra2">%</sup>
+        </h5>
+      </div>
+      <div class="middle">
+        <h5>
+          <span>78</span>
+          <span class="extra">.6</span>
+          <sup>%</sup>
+        </h5>
+      </div>
+      <div class="bottom-text">
+        <div><p>Company Avg Score Vs Others</p></div>
+        <div>
+          <img
+          src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/arrow_down.png"
+          alt=""
+        />
+        </div>
+      </div>
+    </div></div>
+    <div class="landing-popup popup-pink" id="popupbox2">
+      <div class="outer-container">
+        <div class="text-upper">
+          <i class="bx bx-x fa-2x fa" aria-hidden="true" onclick="hidebox('popupbox2')"></i>
+          
+          <h6>Course Performance</h6>
+          
+        </div>
+        <div class="calender-text">
+          <div class="item-1">
+            <div class="text1" onclick="toggleContainer('container2-1')">
+              <p>Period Begins</p>
+              <p>10.15.17 </p>
+            </div>
+            <div class="container1 showitem" id="container2-1">
+              <div class="datepicker"></div>
+            </div>
+          </div>
+          <div class="item-2">
+            <div class="text1" onclick="toggleContainer('container2-2')">
+              <p>Period Ends</p>
+              <p>10.15.18 </p>
+            </div>
+            <div class="container1 showitem" id="container2-2">
+              <div class="datepicker"></div>
+            </div>
+          </div>
+          <div class="item-3">
+<div class="top-performer" onclick="toggleContainer('container2-3')"><p>Top Performers</p></div>
+<div class="performer-container showitem" id="container2-3">
+<ul>
+  <li>
+    <div class="profile-list">
+    <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+    <div><p class="txt">Ryan Grubb</p></div>
+    <div class="inner-container">
+      <div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</li>
+  <li>
+    <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Andrew LaPine</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+<div>
+  <div class="next-seven" id="hidden-div2">
+    <ul>
+    <li class="green-color"> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li class="green-color"> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li class="green-color"> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li class="green-color"> 
+      <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </li>
+  </ul></div>
+  <ul>
+    <li class="green-color view-all">
+      <div class="profile-list" onclick="showDiv2('hidden-div2')">
+        <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/download.png" alt=""></div>
+        <div><p class="txt">View All Top Performers</p></div>
+        <div class="inner-container">
+          <div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  
+</div>
+</div>
+
+
+          </div>
+          <div class="item-4">
+            <ul onclick="toggleContainer('container2-4')">
+              <li class="chat-view">Chat View</li>
+            </ul>
+            <div class="graph-container showitem" id="container2-4">
+              <div class="specialbox-pink"></div>
+              <ul>
+                <li>
+                  <span>10.15.17 </span>
+                  <span>10.15.18</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="item-5">
+            <ul onclick="toggleContainer('container2-5')"><li>Customize My Views</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div></div>
+      <div class="box3">
+        <div class="clickbox-icon" id="boxdiv5" onclick="toggleDivs5()">
+          <h6> Courses Completion-Rate</h6>
+          <i class="fa fa-angle-up"></i>
+        </div>
+        <div id="boxdiv6" class="boxhidden">
+        <div class="inner" >
+          <div class="popup-inner" id="popup3">
+            <div>
+              <div class="icon_close" >
+              <i class='bx bx-x fa-2x fa' onclick="hideDiv('popup3')"></i></div>
+            </div>
+            <div><p>Courses completed from within total courses attempted by team members of this company.</p></div>
+          </div>
+        <div class="dots-box">
+          <div onclick="showDiv('popup3')">
+            <span></span>
+            <span></span>
+            <span></span></div>
+            <div ><i class="fa fa-exclamation-triangle" onclick="showDiv('popup3')"></i>
+              <i class="fa fa-angle-down" onclick="toggleDivs6()"></i>
+            </div>
+        </div>
+        <div class="number-box" onclick="showbox('popupbox3')">
+      <div class="upper">
+        <h6>Courses Completion Rate</h6>
+        <h5>
+          <sup>-</sup>
+          <span>8</span>
+          <span class="extra">.63</span>
+          <sup class="extra2">%</sup>
+        </h5>
+      </div>
+      <div class="middle">
+        <h5>
+          <span>30</span>
+          <span class="extra">.16</span>
+          <sup>%</sup>
+        </h5>
+      </div>
+      <div class="bottom-text">
+        <div><p>Company Completion Rate Vs Others</p></div>
+        <div>
+          <img
+          src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/arrow_down.png"
+          alt=""
+        />
+        </div>
+      </div>
+    </div></div>
+    <div class="landing-popup popup-purple" id="popupbox3">
+      <div class="outer-container">
+        <div class="text-upper">
+          <i class="bx bx-x fa-2x fa" aria-hidden="true" onclick="hidebox('popupbox3')"></i>
+          <h6>Course Performance</h6>
+          
+        </div>
+        <div class="calender-text">
+          <div class="item-1">
+            <div class="text1" onclick="toggleContainer('container3-1')">
+              <p>Period Begins</p>
+              <p>10.15.17 </p>
+            </div>
+            <div class="container1 showitem" id="container3-1">
+              <div class="datepicker"></div>
+            </div>
+          </div>
+          <div class="item-2">
+            <div class="text1" onclick="toggleContainer('container3-2')">
+              <p>Period Ends</p>
+              <p>10.15.18 </p>
+            </div>
+            <div class="container1 showitem" id="container3-2">
+              <div class="datepicker"></div>
+            </div>
+          </div>
+          <div class="item-3">
+<div class="top-performer" onclick="toggleContainer('container3-3')"><p>Top Performers</p></div>
+<div class="performer-container showitem" id="container3-3">
+<ul>
+  <li>
+    <div class="profile-list">
+    <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+    <div><p class="txt">Ryan Grubb</p></div>
+    <div class="inner-container">
+      <div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</li>
+  <li>
+    <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Andrew LaPine</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+<div>
+  <div class="next-seven" id="hidden-div3">
+    <ul>
+    <li class="green-color"> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li class="green-color"> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li class="green-color"> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li class="green-color"> 
+      <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </li>
+  </ul></div>
+  <ul>
+    <li class="green-color view-all">
+      <div class="profile-list" onclick="showDiv3('hidden-div3')">
+        <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/download.png" alt=""></div>
+        <div><p class="txt">View All Top Performers</p></div>
+        <div class="inner-container">
+          <div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  
+</div>
+</div>
+
+
+          </div>
+          <div class="item-4">
+            <ul onclick="toggleContainer('container3-4')">
+              <li class="chat-view">Chat View</li>
+            </ul>
+            <div class="graph-container showitem" id="container3-4">
+              <div class="specialbox-purple"></div>
+              <ul>
+                <li>
+                  <span>10.15.17 </span>
+                  <span>10.15.18</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="item-5">
+            <ul onclick="toggleContainer('container3-5')"><li>Customize My Views</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div></div>
+      <div class="box4">
+        <div class="clickbox-icon" id="boxdiv7" onclick="toggleDivs7()">
+          <h6> Courses Completion-Rate</h6>
+          <i class="fa fa-angle-up"></i>
+        </div>
+        <div id="boxdiv8" class="boxhidden">
+        <div class="inner" >
+          <div class="popup-inner" id="popup4">
+            <div>
+              <div class="icon_close" >
+              <i class='bx bx-x fa-2x fa' onclick="hideDiv('popup4')"></i></div>
+            </div>
+            <div><p>Percentage of courses passed against courses attempted.</p></div>
+          </div>
+        <div class="dots-box">
+          <div onclick="showDiv('popup4')">
+            <span></span>
+            <span></span>
+            <span></span></div>
+            <div ><i class="fa fa-exclamation-triangle" onclick="showDiv('popup4')"></i>
+              <i class="fa fa-angle-down" onclick="toggleDivs8()"></i></div>
+        </div>
+        <div class="number-box" onclick="showbox('popupbox4')">
+      <div class="upper">
+        <h6>Course Pass Rate</h6>
+        <h5>
+          <sup>+</sup>
+          <span>3</span>
+          <span class="extra">.41</span>
+          <sup class="extra2">%</sup>
+        </h5>
+      </div>
+      <div class="middle">
+        <h5>
+          <span>98</span>
+          <span class="extra">.41</span>
+          <sup>%</sup>
+        </h5>
+      </div>
+      <div class="bottom-text">
+        <div><p>Company Pass Rate Vs Others</p></div>
+        <div>
+          <img
+          src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/arrow_down.png"
+          alt=""
+        />
+        </div>
+      </div>
+    </div></div>
+    <div class="landing-popup popup-blue" id="popupbox4">
+      <div class="outer-container">
+        <div class="text-upper">
+          <i class="bx bx-x fa-2x fa" aria-hidden="true" onclick="hidebox('popupbox4')"></i>
+          <h6>Course Performance</h6>
+          
+        </div>
+        <div class="calender-text">
+          <div class="item-1">
+            <div class="text1" onclick="toggleContainer('container4-1')">
+              <p>Period Begins</p>
+              <p>10.15.17 </p>
+            </div>
+            <div class="container1 showitem" id="container4-1">
+              <div class="datepicker"></div>
+            </div>
+          </div>
+          <div class="item-2">
+            <div class="text1" onclick="toggleContainer('container4-2')">
+              <p>Period Ends</p>
+              <p>10.15.18 </p>
+            </div>
+            <div class="container1 showitem" id="container4-2">
+              <div class="datepicker"></div>
+            </div>
+          </div>
+          <div class="item-3">
+<div class="top-performer" onclick="toggleContainer('container4-3')"><p>Top Performers</p></div>
+<div class="performer-container showitem" id="container4-3">
+<ul>
+  <li>
+    <div class="profile-list">
+    <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+    <div><p class="txt">Ryan Grubb</p></div>
+    <div class="inner-container">
+      <div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</li>
+  <li>
+    <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Andrew LaPine</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+<div>
+  <div class="next-seven" id="hidden-div4">
+    <ul>
+    <li class="green-color"> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li class="green-color"> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li class="green-color"> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li class="green-color"> 
+      <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </li>
+  </ul></div>
+  <ul>
+    <li class="green-color view-all">
+      <div class="profile-list" onclick="showDiv4('hidden-div4')">
+        <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/download.png" alt=""></div>
+        <div><p class="txt">View All Top Performers</p></div>
+        <div class="inner-container">
+          <div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  
+</div>
+</div>
+
+
+          </div>
+          <div class="item-4">
+            <ul onclick="toggleContainer('container4-4')">
+              <li class="chat-view">Chat View</li>
+            </ul>
+            <div class="graph-container showitem" id="container4-4">
+              <div class="special-box"></div>
+              <ul>
+                <li>
+                  <span>10.15.17 </span>
+                  <span>10.15.18</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="item-5">
+            <ul onclick="toggleContainer('container4-5')"><li>Customize My Views</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div></div>
+      <div class="box5">
+        <div class="clickbox-icon" id="boxdiv9" onclick="toggleDivs9()">
+          <h6> Courses Completion-Rate</h6>
+          <i class="fa fa-angle-up"></i>
+        </div>
+        <div id="boxdiv10" class="boxhidden">
+        <div class="inner " >
+          <div class="popup-inner" id="popup5">
+            <div>
+              <div class="icon_close" >
+              <i class='bx bx-x fa-2x fa' onclick="hideDiv('popup5')"></i></div>
+            </div>
+            <div><p>Percentage of courses passed against courses attempted.</p></div>
+          </div>
+        <div class="dots-box">
+          <div onclick="showDiv('popup5')">
+            <span></span>
+            <span></span>
+            <span></span></div>
+            <div ><i class="fa fa-exclamation-triangle" onclick="showDiv('popup5')"></i>
+              <i class="fa fa-angle-down" onclick="toggleDivs10()"></i></div>
+        </div>
+        <div class="number-box" onclick="showbox('popupbox5')">
+      <div class="upper">
+        <h6>Course Fail Rate</h6>
+        <h5>
+          <sup>-</sup>
+          <span>3</span>
+          <span class="extra">.43</span>
+          <sup class="extra2">%</sup>
+        </h5>
+      </div>
+      <div class="middle">
+        <h5>
+          <span>1</span>
+          <span class="extra">.57</span>
+          <sup>%</sup>
+        </h5>
+      </div>
+      <div class="bottom-text">
+        <div><p>Company Fail Vs Others</p></div>
+        <div>
+          <img
+            src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/arrow_up.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div></div>
+    <div class="landing-popup popup-orange" id="popupbox5">
+      <div class="outer-container">
+        <div class="text-upper">
+          <i class="bx bx-x fa-2x fa" aria-hidden="true" onclick="hidebox('popupbox5')"></i>
+          <h6>Course Performance</h6>
+          
+        </div>
+        <div class="calender-text">
+          <div class="item-1">
+            <div class="text1" onclick="toggleContainer('container5-1')">
+              <p>Period Begins</p>
+              <p>10.15.17 </p>
+            </div>
+            <div class="container1 showitem" id="container5-1" >
+              <div class="datepicker"></div>
+            </div>
+          </div>
+          <div class="item-2">
+            <div class="text1" onclick="toggleContainer('container5-2')">
+              <p>Period Ends</p>
+              <p>10.15.18 </p>
+            </div>
+            <div class="container1 showitem" id="container5-2">
+              <div class="datepicker"></div>
+            </div>
+          </div>
+          <div class="item-3">
+<div class="top-performer" onclick="toggleContainer('container5-3')"><p>Top Performers</p></div>
+<div class="performer-container showitem" id="container5-3">
+<ul>
+  <li>
+    <div class="profile-list">
+    <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+    <div><p class="txt">Ryan Grubb</p></div>
+    <div class="inner-container">
+      <div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</li>
+  <li>
+    <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Andrew LaPine</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+<div>
+  <div class="next-seven" id="hidden-div5">
+    <ul>
+    <li class="green-color"> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li class="green-color"> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li class="green-color"> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li> <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div></li>
+    <li class="green-color"> 
+      <div class="profile-list">
+      <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/profile.png" alt=""></div>
+      <div><p class="txt">Patrick Eberhard</p></div>
+      <div class="inner-container">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </li>
+  </ul></div>
+  <ul>
+    <li class="green-color view-all">
+      <div class="profile-list" onclick="showDiv5('hidden-div5')">
+        <div class="img-container"><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/download.png" alt=""></div>
+        <div><p class="txt">View All Top Performers</p></div>
+        <div class="inner-container">
+          <div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  
+</div>
+</div>
+
+
+          </div>
+          <div class="item-4">
+            <ul onclick="toggleContainer('container5-4')">
+              <li class="chat-view">Chat View</li>
+            </ul>
+            <div class="graph-container showitem" id="container5-4">
+              <div class="special-box2"></div>
+              <ul>
+                <li>
+                  <span>10.15.17 </span>
+                  <span>10.15.18</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="item-5">
+            <ul onclick="toggleContainer('container5-5')"><li>Customize My Views</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div></div>
+      
+    </div> </div>
+  </div>
+</section>
+  <!-- boxes section end  -->
+  <!-- charts sections start  -->
+  <div class="charts-section">
+    <section class="charts">
+      <div class="charts-container">
+        <div class="left-element hideleft">
+          <div>
+            <div class="first-box">
+              <div onclick="showDiv('popup6')">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="popup-inner" id="popup6">
+              <div>
+                <div class="icon_close" >
+                <i class='bx bx-x fa-2x fa' onclick="hideDiv('popup6')"></i></div>
+              </div>
+              <div><p>The number of individuals utilizing the metrics (except membership)
+                being measured on the metrics items below.</p></div>
+            </div>
+            <div class="second-box">
+              <h3>Utilization</h3>
+            </div>
+            <div class="third-box">
+              <div class="third-box-container">
+                <div class="left-box">
+                  <div class="animation-box">
+                    <div class="box"></div>
+                    <div class="first-circle">
+                      <svg viewBox="0 0 100 100">
+                        <circle
+                          class="circle-inner"
+                          cx="50"
+                          cy="50"
+                          r="45"
+                          fill="none"
+                          stroke-dasharray="2, 2"
+                          transform="rotate(-90 50 50)"
+                        ></circle>
+                        <circle
+                          class="circle1"
+                          cx="50"
+                          cy="50"
+                          r="45"
+                          transform="rotate(-90 50 50)"
+                          style="stroke-dashoffset: 76.2174"
+                        ></circle>
+                      </svg>
+                    </div>
+                    <div class="second-circle">
+                      <svg viewBox="0 0 100 100">
+                        <circle
+                          class="circle-inner"
+                          cx="50"
+                          cy="50"
+                          r="45"
+                          fill="none"
+                          stroke-dasharray="2, 4"
+                          transform="rotate(-90 50 50)"
+                        ></circle>
+                        <circle
+                          class="circle11"
+                          cx="50"
+                          cy="50"
+                          r="45"
+                          transform="rotate(-90 50 50)"
+                          style="stroke-dashoffset: 206.069"
+                        ></circle>
+                      </svg>
+                      <div class="percentage-area">
+                        <div class="pink">
+                          <h1><span id="numberDiv"></span></h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="right-box">
+                  <div class="mychart">
+                    <div class="mychart-inner">
+                      <div class="inner1">
+                        <div id="myChart1" class="chart--container">
+                          <a
+                            class="zc-ref"
+                            href="https://www.zingchart.com/"
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <ul>
+                    <li>
+                      <span class="color-1"></span>
+                      <p>courses</p>
+                    </li>
+                    <li>
+                      <span class="color-2"></span>
+                      <p>chapters</p>
+                    </li>
+                    <li>
+                      <span class="color-3"></span>
+                      <p>foundation</p>
+                    </li>
+                    <li>
+                      <span class="color-4"></span>
+                      <p>certifications</p>
+                    </li>
+                    <li>
+                      <span class="color-5"></span>
+                      <p>volunter</p>
+                    </li>
+                    <li>
+                      <span class="color-6"></span>
+                      <p>website</p>
+                    </li>
+                    <li>
+                      <span class="color-7"></span>
+                      <p>expo</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="fourth-box">
+              <div class="fourth-box-container">
+                <div class="left-box">
+                  <div class="image">
+                    <div><h1 id="numberDiv1"></h1></div>
+                  </div>
+                  <div class="text">
+                    <div class="dots-box">
+                      <div onclick="showDiv('popup8')"><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="popup-innersmall" id="popup8">
+                      <div>
+                        <div class="icon_close" >
+                        <i class='bx bx-x fa-2x fa' onclick="hideDiv('popup8')"></i></div>
+                      </div>
+                      <div><p>Average time to complete a course.</p></div>
+                    </div>
+                    <div class="text-box">
+                      <h3>
+                        Course Duration Average <br />
+                        <span>(in Days)</span>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="right-box">
+                  <div class="image">
+                    <div class="image-container">
+                      <svg viewBox="0 0 100 100">
+                        <circle
+                          class="circle-inner2"
+                          cx="50"
+                          cy="50"
+                          r="45"
+                          fill="none"
+                          stroke-dasharray="2, 4"
+                          transform="rotate(-90 50 50)"
+                        ></circle>
+                        <circle
+                          class="circle2"
+                          cx="50"
+                          cy="50"
+                          r="45"
+                          transform="rotate(-90 50 50)"
+                          style="stroke-dashoffset: 183.486"
+                        ></circle>
+                      </svg>
+                      <div class="percentage-value">
+                        <h1><span id="numberDiv2"></span></h1>
+                        <p>OVERALL Score</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text">
+                    <div class="dots-box">
+                      <div onclick="showDiv('popup9')">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="popup-innersmall" id="popup9">
+                      <div>
+                        <div class="icon_close" >
+                        <i class='bx bx-x fa-2x fa' onclick="hideDiv('popup9')"></i></div>
+                      </div>
+                      <div><p>Average time to complete a course.</p></div>
+                    </div>
+
+                    <div class="text-box">
+                      <h3>Single Engagement</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div> 
+        <!-- left2 element -->
+        <div class="left-element2">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+            <div class="firstbox item active">
+              <div class="first-box">
+                <div onclick="showDiv('popup6')">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="popup-inner" id="popup6">
+                <div>
+                  <div class="icon_close" >
+                  <i class='bx bx-x fa-2x fa' onclick="hideDiv('popup6')"></i></div>
+                </div>
+                <div><p>The number of individuals utilizing the metrics (except membership)
+                  being measured on the metrics items below.</p></div>
+              </div>
+              <div class="second-box">
+                <h3>Utilization</h3>
+              </div>
+              <div class=" third-box-container left-box">
+                <div class="animation-box">
+                  <div class="box"></div>
+                  <div class="first-circle">
+                    <svg viewBox="0 0 100 100">
+                      <circle
+                        class="circle-inner"
+                        cx="50"
+                        cy="50"
+                        r="45"
+                        fill="none"
+                        stroke-dasharray="2, 2"
+                        transform="rotate(-90 50 50)"
+                      ></circle>
+                      <circle
+                        class="circle1"
+                        cx="50"
+                        cy="50"
+                        r="45"
+                        transform="rotate(-90 50 50)"
+                        style="stroke-dashoffset: 76.2174"
+                      ></circle>
+                    </svg>
+                  </div>
+                  <div class="second-circle">
+                    <svg viewBox="0 0 100 100">
+                      <circle
+                        class="circle-inner"
+                        cx="50"
+                        cy="50"
+                        r="45"
+                        fill="none"
+                        stroke-dasharray="2, 4"
+                        transform="rotate(-90 50 50)"
+                      ></circle>
+                      <circle
+                        class="circle11"
+                        cx="50"
+                        cy="50"
+                        r="45"
+                        transform="rotate(-90 50 50)"
+                        style="stroke-dashoffset: 206.069"
+                      ></circle>
+                    </svg>
+                    <div class="percentage-area">
+                      <div class="pink">
+                        <h1><span id="numberDiv6"></span></h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="secondbox item">
+              <div class="first-box">
+                <div onclick="showDiv('popup6')">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="popup-inner" id="popup6">
+                <div>
+                  <div class="icon_close" >
+                  <i class='bx bx-x fa-2x fa' onclick="hideDiv('popup6')"></i></div>
+                </div>
+                <div><p>The number of individuals utilizing the metrics (except membership)
+                  being measured on the metrics items below.</p></div>
+              </div>
+              <div class="second-box">
+                <h3>Utilization</h3>
+              </div>
+              <div class="right-box">
+                <div class="mychart">
+                  <div class="mychart-inner">
+                    <div class="inner1">
+                      <div id="myChart2" class="chart--container">
+                        <a
+                          class="zc-ref"
+                          href="https://www.zingchart.com/"
+                        ></a>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <span class="color-1"></span>
+                    <p>courses</p>
+                  </li>
+                  <li>
+                    <span class="color-2"></span>
+                    <p>chapters</p>
+                  </li>
+                  <li>
+                    <span class="color-3"></span>
+                    <p>foundation</p>
+                  </li>
+                  <li>
+                    <span class="color-4"></span>
+                    <p>certifications</p>
+                  </li>
+                  <li>
+                    <span class="color-5"></span>
+                    <p>volunter</p>
+                  </li>
+                  <li>
+                    <span class="color-6"></span>
+                    <p>website</p>
+                  </li>
+                  <li>
+                    <span class="color-7"></span>
+                    <p>expo</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+           <div class="thirdbox item">
+            <div class="left-box">
+              
+              <div class="text">
+                <div class="dots-box">
+                  <div onclick="showDiv('popup8')"><span></span><span></span><span></span></div>
+                </div>
+                <div class="popup-innersmall" id="popup8">
+                  <div>
+                    <div class="icon_close" >
+                    <i class='bx bx-x fa-2x fa' onclick="hideDiv('popup8')"></i></div>
+                  </div>
+                  <div><p>Average time to complete a course.</p></div>
+                </div>
+                <div class="text-box">
+                  <h3>
+                    Course Duration Average <br />
+                    <span>(in Days)</span>
+                  </h3>
+                </div>
+              </div>
+              <div class="image">
+                <div><h1 id="numberDiv4"></h1></div>
+              </div>
+              
+            </div>
+           </div>
+           <div class="fourthbox item">
+            <div class="right-box">
+              <div class="text">
+                <div class="dots-box">
+                  <div onclick="showDiv('popup9')">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                 
+                </div>
+                <div class="popup-innersmall" id="popup9">
+                  <div>
+                    <div class="icon_close" >
+                    <i class='bx bx-x fa-2x fa' onclick="hideDiv('popup9')"></i></div>
+                  </div>
+                  <div><p>Average time to complete a course.</p></div>
+                </div>
+  
+                <div class="text-box">
+                  <h3>Single Engagement</h3>
+                </div>
+              </div>
+            <div class="image">
+              <div class="image-container">
+                <svg viewBox="0 0 100 100">
+                  <circle
+                    class="circle-inner2"
+                    cx="50"
+                    cy="50"
+                    r="45"
+                    fill="none"
+                    stroke-dasharray="2, 4"
+                    transform="rotate(-90 50 50)"
+                  ></circle>
+                  <circle
+                    class="circle2"
+                    cx="50"
+                    cy="50"
+                    r="45"
+                    transform="rotate(-90 50 50)"
+                    style="stroke-dashoffset: 183.486"
+                  ></circle>
+                </svg>
+                <div class="percentage-value">
+                  <h1><span id="numberDiv5"></span></h1>
+                  <p>OVERALL Score</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div></div>
+        <div class="buttons">
+        <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+      </div>
+      <!-- Left and right controls -->
+ 
+
+            
+          </div>
+        </div>
+        <!-- right-element  -->
+        <div class="rightshowarrow" id="boxdiv11" onclick="toggleDivs11()">
+          <i class="fa fa-angle-down " id="rotateButton" ></i>
+        </div>
+      
+        <div class="right-element " id="boxdiv12">
+         
+          <div class="first-element">
+            <div>
+              <div class="dots-box">
+                <div onclick="showDiv('popup7')">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+            <div><h3>Professional Development Index</h3></div>
+            <div>
+              <ul>
+                <li><span>Average</span></li>
+                <li><span>Your Company 2018</span></li>
+                <li><span>Your Company 2017</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="popup-inner" id="popup7">
+            <div>
+              <div class="icon_close" >
+              <i class='bx bx-x fa-2x fa' onclick="hideDiv('popup7')"></i></div>
+            </div>
+            <div><p>The number of individuals utilizing the metrics (except membership)
+              being measured on the metrics items below.</p></div>
+          </div>
+          <div class="third-element">
+            <svg height="200" width="100%" class="specialsvg">
+              <polyline
+                width="100%"
+                points="0,90 40,25 60,40 120,80 160,60 180,10 220,60 240,40
+      295,120 340,60 380,40 400,130 500,20 500,20 600,40 700,90 720,40 729,50 770,50 800,90 850,100 900,30 950,60 1000,70 1050,60 1100,20 1150,90 1200,40 1250,80 1300,10 1400,76 1450,88 1500,68 1550,45 1600,89 1650,34 1650,67 1700,23 1770,34 1880,67 1950,23 2000,78 2050,26 2100,94 2150,88 2200,88 2300,23
+      "
+                style="fill: none; stroke: #ec982c; stroke-width: 2"
+              ></polyline>
+            </svg>
+            <div class="specialboxsvg">
+            <svg height="200" width="100%" class="specialsvg2 specialsvg">
+              <polyline width="100%" points="0,60 20,50 40,90 40,23 90,80 90,50 123,60 123,40
+  140,50 180,80 300,40 400,100 450,20 500,90 600,40 700,90 720,40 729,50 770,50 800,40 850,100 900,50 950,60 1000,20 1050,80 1100,40 1150,90 1200,20 1250,50 1300,40 1400,36 1450,68 1500,48 1550,25 1600,69 1650,34 1650,67 1700,23 1770,34 1880,67 1950,23 2000,78 2050,26 2100,94 2150,88 2200,88 2300,23
+  " style="fill:none;stroke:#107EC9;stroke-width:2"></polyline></div>
+          </svg>
+          </div>
+          <div class="second-element">
+            <ul>
+              <li>JAN</li>
+              <li>FEB</li>
+              <li>MAR</li>
+              <li>APR</li>
+              <li>MAY</li>
+              <li>JUN</li>
+              <li>JUL</li>
+              <li>AUG</li>
+              <li>SEP</li>
+              <li>OCT</li>
+              <li>NOV</li>
+              <li>DEC</li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <section class="links-section">
+<div class="links-container">
+  <div class="left-box">
+    <div class="rightshowarrow arrow2" id="boxdiv15" onclick="toggleDivs15()">
+      <i class="fa fa-angle-down " id="rotateButton2" ></i>
+    </div>
+    <div class="style-pages" id="boxdiv16">
+      <div class="header-text"><h1>Insights</h1></div>
+      <div class="chat-container">
+        <div class="fade-right" data-aos="fade-right"><p>
+          Looks like your company's <span> Coursework Performance </span>
+          has increased in several areas since last month. Nice job!
+      </p></div>
+        <div class="fade-left" data-aos="fade-left">
+          <p>
+          Your company's
+          <span>Wi-Fi competencies</span>
+          might need some attention. Here are a few
+          <span>Courses</span> you might
+          consider: httpz:/bit.ly.kashjf45
+      </p></div>
+        <div class="fade-right" data-aos="fade-right"><p>
+          Did you know that you can customize your <span>Company's Home Screen </span>
+          by selecting <span>"Add to Home"</span> under the <span>Extras Menu?</span>
+          Just look for the three dots.
+      </p></div>
+        <div class="fade-left" data-aos="fade-left"><p>
+          Certification is one of the best ways to keep your company's skills current and remain competitive. Stay on top of your company's
+          <span>Certification Performance.</span>
+      </p></div>
+        <div class="fade-right" data-aos="fade-right"><p>
+          Want to know who your company's <span>Top Performers</span> are? You can see them sorted by areas of expertise and get their <span>Member Transcripts</span> right here.
+
+      </p></div>
+      </div>
+      <div class="image-container">
+        <img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/chat2.png" alt="">
+      </div>
+    </div>
+
+  </div>
+   <!-- arrow function  -->
+  
+  <!-- right element  -->
+  <div class="right-box" >
+    <div class="rightshowarrow arrow2" id="boxdiv13" onclick="toggleDivs13()">
+      <i class="fa fa-angle-down " id="rotateButton1" ></i>
+    </div>
+<div class="main-items" id="boxdiv14">
+  <div class="items-container">
+    <div class="header-text"><h1>Company Competencies</h1></div>
+    <div class="add-more" onclick="showElement('show-linkbox')">
+      <i class="fa fa-th"></i>
+      <span>Add More</span>
+    </div>
+    <div class="show-linkbox" id="show-linkbox">
+      <div class="close-iconbtn" onclick="hideElement('show-linkbox')">
+        <i class='bx bx-x fa-2x fa'></i>
+      </div>
+      <div>
+        <div class="wifi-box firstwifi">
+          <div>
+            <div class="click-icon">
+              <div class="icons">
+                <i class='bx bxs-x-square fa'></i>
+            </div>
+            <p>Wifi</p>
+            </div>
+          </div>
+          <div>
+            <div class="popup-dots">
+              <div>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div></div>
+          </div>
+        </div> 
+        <div class="wifi-box">
+          <div>
+            <div class="click-icon">
+              <div class="icons">
+                <i class="fa fa-angle-up"></i>
+                <i class="fa fa-angle-down"></i>
+            </div>
+            <p>Access Network</p>
+            </div>
+          </div>
+          <div>
+            <div class="popup-dots">
+              <div>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div></div>
+          </div>
+        </div> 
+        <div class="wifi-box">
+          <div>
+            <div class="click-icon">
+              <div class="icons">
+                <i class="fa fa-angle-up"></i>
+                <i class="fa fa-angle-down"></i>
+            </div>
+            <p>Cabling</p>
+            </div>
+          </div>
+          <div>
+            <div class="popup-dots">
+              <div>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div></div>
+          </div>
+        </div> 
+        <div class="wifi-box">
+          <div>
+            <div class="click-icon">
+              <div class="icons">
+                <i class="fa fa-angle-up"></i>
+                <i class="fa fa-angle-down"></i>
+            </div>
+            <p>DOCSIS</p>
+            </div>
+          </div>
+          <div>
+            <div class="popup-dots">
+              <div>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div></div>
+          </div>
+        </div> 
+        <div class="wifi-box">
+          <div>
+            <div class="click-icon">
+              <div class="icons">
+                <i class="fa fa-angle-up"></i>
+                <i class="fa fa-angle-down"></i>
+            </div>
+            <p>Headend</p>
+            </div>
+          </div>
+          <div>
+            <div class="popup-dots">
+              <div>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div></div>
+          </div>
+        </div> 
+        <div class="wifi-box">
+          <div>
+            <div class="click-icon">
+              <div class="icons">
+                <i class="fa fa-angle-up"></i>
+                <i class="fa fa-angle-down"></i>
+            </div>
+            <p>Home Networking</p>
+            </div>
+          </div>
+          <div>
+            <div class="popup-dots">
+              <div>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div></div>
+          </div>
+        </div> 
+        <div class="wifi-box">
+          <div>
+            <div class="click-icon">
+              <div class="icons">
+                <i class="fa fa-angle-up"></i>
+                <i class="fa fa-angle-down"></i>
+            </div>
+            <p>Vedio</p>
+            </div>
+          </div>
+          <div>
+            <div class="popup-dots">
+              <div>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div></div>
+          </div>
+        </div> 
+        <div class="wifi-box">
+          <div>
+            <div class="click-icon">
+              <div class="icons">
+                <i class="fa fa-angle-up"></i>
+                <i class="fa fa-angle-down"></i>
+            </div>
+            <p>VOIP</p>
+            </div>
+          </div>
+          <div>
+            <div class="popup-dots">
+              <div>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div></div>
+          </div>
+        </div> 
+      </div>
+    </div>
+    <div class="open-links">
+      <!-- wifi button  -->
+      <div>
+        <div class="wifi-box"  >
+          <div>
+            <div class="click-icon" onclick="togglePopup('popup1')">
+              <div class="icons">
+                <i class="fa fa-angle-up" id="popup1-arrow1"></i>
+                <i class="fa fa-angle-down" id="popup1-arrow2"></i>
+            </div>
+            <p >Wifi</p>
+            </div>
+          </div>
+          <div>
+            <div class="popup-dots">
+              <div onclick="togglePopup('popup1')">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div></div>
+          </div>
+        </div>
+        <div class="link-popup popup1" id="popup1">
+          <div class="progressbox progress1" >
+            <ul class="progressbox-1">
+              <li>
+                
+                  <h4>Primer WiFi</h4>
+                  <div>
+                      <span class="light-green-color"></span>
+                      <span class="yellow-color"></span>
+                      <span>Your Company</span>
+                  </div>
+                  <div class="second-colorbox">
+                      <span class="dark-blue"></span>
+                      <span>Similar Companies</span>
+                  </div>
+                  <h5>Suggestions</h5>
+              
+              </li>
+              <li class="progressbox-1-1">
+                <div class="progress">
+                  <div class="progress-bar"></div>
+                </div>
+              </li>
+              <li class="progress-1-2">
+                <div class="progress">
+                  <div class="progress-bar"></div>
+                </div>
+              </li>
+            </ul>
+            <ul class="progressbox-2">
+              <li>
+                
+                <h4>Fundamental WiFi</h4>
+                <h5>Suggestions</h5>
+            
+            </li>
+            <li class="progressbox-1-1">
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
+            </li>
+            <li class="progress-1-2">
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
+            </li>
+            </ul>
+            <ul class="progressbox-3">
+              <li>
+                
+                <h4>Advanced WiFi</h4>
+                <h5>Suggestions</h5>
+            
+            </li>
+            <li class="progressbox-1-1">
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
+            </li>
+            <li class="progress-1-2">
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
+            </li>
+            </ul>
+            <ul class="progressbox-4 check">
+              <li class="suggestions-item-box">
+                
+                <h4>Intermadiate WiFi</h4>
+                <h5 class="yellow-head" onclick="showsugDiv2()">Suggestions</h5>
+                <div class="popup-suggestions" id="suggestion">
+                  <div>
+                    <div class="top">
+                      <i class="fa fa-exclamation-triangle"></i>
+                      <div class="click-suggestion" onclick="hidesugDiv2()">
+                        <i class="bx bx-x fa-2x fa"></i>
+                      </div>
+                    </div>
+                    <div class="bottom">
+                      <div class="text-section">
+                        <p>It is a long established fact that a reader will be
+                          distracted by the readable content of a page when looking at its layout
+                          . The point of using Lorem Ipsum is that it has a more-or-less
+                          normal distribution of letters, as opposed to using 'Content here,
+                          content here',<br><br> making it look like readable English.</p>
+                      </div>
+                      <div class="two-buttons">
+                        <button class="orange-button" type="button">Sounds good</button>
+                        <button class="simple-button" type="button">No thanks</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+            </li>
+            <li class="progressbox-1-1">
+              <div class="progress">
+                <div class="progress-bar yellow-bar"></div>
+              </div>
+            </li>
+            <li class="progress-1-2">
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
+            </li>
+            </ul>
+          </div>
+        </div>  
+      </div>
+      <!-- rf button  -->
+      <div>
+        <div class="wifi-box">
+          <div>
+            <div class="click-icon" onclick="togglePopup('popup2')">
+              <div class="icons" >
+                <i class="fa fa-angle-up" id="popup2-arrow1"></i>
+                <i class="fa fa-angle-down" id="popup2-arrow2" ></i>
+            </div>
+            <p>RF</p>
+            </div>
+          </div>
+          <div>
+            <div class="popup-dots" >
+              <div onclick="togglePopup('popup2')">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div></div>
+          </div>
+        </div> 
+        <div class="link-popup popup2" id="popup2">
+          <div class="progressbox" >
+            <ul class="progressbox-1">
+              <li>
+                
+                  <h4>Primer RFe</h4>
+                  <div>
+                      <span class="light-green-color"></span>
+                      <span class="yellow-color"></span>
+                      <span>Your Company</span>
+                  </div>
+                  <div class="second-colorbox">
+                      <span class="dark-blue"></span>
+                      <span>Similar Companies</span>
+                  </div>
+                  <h5>Suggestions</h5>
+              
+              </li>
+              <li class="progressbox-1-1">
+                <div class="progress">
+                  <div class="progress-bar"></div>
+                </div>
+              </li>
+              <li class="progress-1-2">
+                <div class="progress">
+                  <div class="progress-bar"></div>
+                </div>
+              </li>
+            </ul>
+            <ul class="progressbox-2">
+              <li>
+                
+                <h4>Fundamental RF</h4>
+                <h5>Suggestions</h5>
+            
+            </li>
+            <li class="progressbox-1-1">
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
+            </li>
+            <li class="progress-1-2">
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
+            </li>
+            </ul>
+            <ul class="progressbox-3">
+              <li>
+                
+                <h4>Advanced RF</h4>
+                <h5>Suggestions</h5>
+            
+            </li>
+            <li class="progressbox-1-1">
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
+            </li>
+            <li class="progress-1-2">
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
+            </li>
+            </ul>
+            <ul class="progressbox-4">
+              <li>
+                
+                <h4>Intermadiate RF</h4>
+                <h5>Suggestions</h5>
+            
+            </li>
+            <li class="progressbox-1-1">
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
+            </li>
+            <li class="progress-1-2">
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
+            </li>
+            </ul>
+          </div>
+        </div> 
+      </div>
+      <!-- vedio button  -->
+      <div>
+        <div class="wifi-box">
+          <div>
+            <div class="click-icon" onclick="togglePopup('popup3')">
+              <div class="icons">
+                <i class="fa fa-angle-up" id="popup3-arrow1"></i>
+                <i class="fa fa-angle-down" id="popup3-arrow2"></i>
+            </div>
+            <p>Vedio</p>
+            </div>
+          </div>
+          <div>
+            <div class="popup-dots">
+              <div onclick="togglePopup('popup3')">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div></div>
+          </div>
+        </div> 
+        <div class="link-popup popup3" id="popup3">
+          <div class="progressbox" >
+            <ul class="progressbox-1">
+              <li>
+                
+                  <h4>Advanced Vedio</h4>
+                  <div>
+                      <span class="light-green-color"></span>
+                      <span class="yellow-color"></span>
+                      <span>Your Company</span>
+                  </div>
+                  <div class="second-colorbox">
+                      <span class="dark-blue"></span>
+                      <span>Similar Companies</span>
+                  </div>
+                  <h5>Suggestions</h5>
+              
+              </li>
+              <li class="progressbox-1-1">
+                <div class="progress">
+                  <div class="progress-bar"></div>
+                </div>
+              </li>
+              <li class="progress-1-2">
+                <div class="progress">
+                  <div class="progress-bar"></div>
+                </div>
+              </li>
+            </ul>
+            <ul class="progressbox-2">
+              <li>
+                
+                <h4>Fundamental Vedio</h4>
+                <h5>Suggestions</h5>
+            
+            </li>
+            <li class="progressbox-1-1">
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
+            </li>
+            <li class="progress-1-2">
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
+            </li>
+            </ul>
+            <ul class="progressbox-3">
+              <li>
+                
+                <h4>Primer Vedio</h4>
+                <h5>Suggestions</h5>
+            
+            </li>
+            <li class="progressbox-1-1">
+              <div class="progress">
+                <div class="progress-bar yellow-bar"></div>
+              </div>
+            </li>
+            <li class="progress-1-2">
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
+            </li>
+            </ul>
+            <ul class="progressbox-4">
+              <li>
+                
+                <h4>Intermadiate Vedio</h4>
+                <h5>Suggestions</h5>
+            
+            </li>
+            <li class="progressbox-1-1">
+              <div class="progress">
+                <div class="progress-bar "></div>
+              </div>
+            </li>
+            <li class="progress-1-2">
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
+            </li>
+            </ul>
+          </div>
+        </div> 
+      </div>
+      <!-- optical theory button  -->
+      <div>
+        <div class="wifi-box">
+          <div>
+            <div class="click-icon" onclick="togglePopup('popup4')">
+              <div class="icons">
+                <i class="fa fa-angle-up" id="popup4-arrow1"></i>
+                <i class="fa fa-angle-down" id="popup4-arrow2"></i>
+            </div>
+            <p>Optical theory</p>
+            </div>
+          </div>
+          <div>
+            <div class="popup-dots">
+              <div onclick="togglePopup('popup4')">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div></div>
+          </div>
+        </div> 
+        <div class="link-popup popup4" id="popup4">
+          <div class="progressbox" >
+            <ul class="progressbox-1">
+              <li>
+                
+                  <h4>Intermadiate Optical Theory</h4>
+                  <div>
+                      <span class="light-green-color"></span>
+                      <span class="yellow-color"></span>
+                      <span>Your Company</span>
+                  </div>
+                  <div class="second-colorbox">
+                      <span class="dark-blue"></span>
+                      <span>Similar Companies</span>
+                  </div>
+                  <h5 class="yellow-head">Suggestions</h5>
+              
+              </li>
+              <li class="progressbox-1-1">
+                <div class="progress">
+                  <div class="progress-bar yellow-bar"></div>
+                </div>
+              </li>
+              <li class="progress-1-2">
+                <div class="progress">
+                  <div class="progress-bar"></div>
+                </div>
+              </li>
+            </ul>
+            <ul class="progressbox-2">
+              <li>
+                
+                <h4>Advanced Optical Theory</h4>
+                <h5 class="yellow-head">Suggestions</h5>
+            
+            </li>
+            <li class="progressbox-1-1">
+              <div class="progress">
+                <div class="progress-bar yellow-bar"></div>
+              </div>
+            </li>
+            <li class="progress-1-2">
+              <div class="progress">
+                <div class="progress-bar"></div>
+              </div>
+            </li>
+            </ul>
+          </div>
+        </div> 
+      </div>
+      <!-- multiplexing button  -->
+<div>
+  <div class="wifi-box">
+    <div>
+      <div class="click-icon" onclick="togglePopup('popup5')">
+        <div class="icons">
+          <i class="fa fa-angle-up"  id="popup5-arrow1"></i>
+          <i class="fa fa-angle-down"  id="popup5-arrow2"></i>
+      </div>
+      <p>Multiplexing</p>
+      </div>
+    </div>
+    <div>
+      <div class="popup-dots">
+        <div onclick="togglePopup('popup5')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div></div>
+    </div>
+  </div> 
+  <div class="link-popup popup5" id="popup5">
+    <div class="progressbox" >
+      <ul class="progressbox-1">
+        <li>
+          
+            <h4>Fundamental Multiplexing</h4>
+            <div>
+                <span class="light-green-color"></span>
+                <span class="yellow-color"></span>
+                <span>Your Company</span>
+            </div>
+            <div class="second-colorbox">
+                <span class="dark-blue"></span>
+                <span>Similar Companies</span>
+            </div>
+            <h5>Suggestions</h5>
+        
+        </li>
+        <li class="progressbox-1-1">
+          <div class="progress">
+            <div class="progress-bar"></div>
+          </div>
+        </li>
+        <li class="progress-1-2">
+          <div class="progress">
+            <div class="progress-bar"></div>
+          </div>
+        </li>
+      </ul>
+      <ul class="progressbox-2">
+        <li>
+          
+          <h4>Intermadiate multiplexing</h4>
+          <h5>Suggestions</h5>
+      
+      </li>
+      <li class="progressbox-1-1">
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+      </li>
+      <li class="progress-1-2">
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+      </li>
+      </ul>
+      <ul class="progressbox-3">
+        <li>
+          
+          <h4>Advanced Multiplexing</h4>
+          <h5>Suggestions</h5>
+      
+      </li>
+      <li class="progressbox-1-1">
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+      </li>
+      <li class="progress-1-2">
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+      </li>
+      </ul>
+      
+    </div>
+  </div> 
+</div>
+<!-- electrcal theory  -->
+<div>
+  <div class="wifi-box">
+    <div>
+      <div class="click-icon" onclick="togglePopup('popup6')">
+        <div class="icons">
+          <i class="fa fa-angle-up" id="popup6-arrow1"></i>
+          <i class="fa fa-angle-down" id="popup6-arrow2"></i>
+      </div>
+      <p>Electrical Theory</p>
+      </div>
+    </div>
+    <div>
+      <div class="popup-dots">
+        <div onclick="togglePopup('popup6')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div></div>
+    </div>
+  </div>
+  <div class="link-popup popup6" id="popup6">
+    <div class="progressbox" >
+      <ul class="progressbox-1">
+        <li>
+          
+            <h4>Intermadiate Electrical Theory</h4>
+            <div>
+                <span class="light-green-color"></span>
+                <span class="yellow-color"></span>
+                <span>Your Company</span>
+            </div>
+            <div class="second-colorbox">
+                <span class="dark-blue"></span>
+                <span>Similar Companies</span>
+            </div>
+            <h5 class="yellow-head">Suggestions</h5>
+        
+        </li>
+        <li class="progressbox-1-1">
+          <div class="progress">
+            <div class="progress-bar yellow-bar"></div>
+          </div>
+        </li>
+        <li class="progress-1-2">
+          <div class="progress">
+            <div class="progress-bar"></div>
+          </div>
+        </li>
+      </ul>
+      <ul class="progressbox-2">
+        <li>
+          
+          <h4>Fundamental Electrical Theory</h4>
+          <h5>Suggestions</h5>
+      
+      </li>
+      <li class="progressbox-1-1">
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+      </li>
+      <li class="progress-1-2">
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+      </li>
+      </ul>
+    </div>
+  </div> 
+</div>
+<!-- network data button  -->
+<div>
+  <div class="wifi-box">
+    <div>
+      <div class="click-icon" onclick="togglePopup('popup7')">
+        <div class="icons">
+          <i class="fa fa-angle-up" id="popup7-arrow1"></i>
+          <i class="fa fa-angle-down"  id="popup7-arrow2"></i>
+      </div>
+      <p>Network Data</p>
+      </div>
+    </div>
+    <div>
+      <div class="popup-dots">
+        <div onclick="togglePopup('popup7')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div></div>
+    </div>
+  </div> 
+  <div class="link-popup popup7" id="popup7">
+    <div class="progressbox" >
+      <ul class="progressbox-1">
+        <li>
+          
+            <h4>Intermadiate Network Data</h4>
+            <div>
+                <span class="light-green-color"></span>
+                <span class="yellow-color"></span>
+                <span>Your Company</span>
+            </div>
+            <div class="second-colorbox">
+                <span class="dark-blue"></span>
+                <span>Similar Companies</span>
+            </div>
+            <h5>Suggestions</h5>
+        
+        </li>
+        <li class="progressbox-1-1">
+          <div class="progress">
+            <div class="progress-bar"></div>
+          </div>
+        </li>
+        <li class="progress-1-2">
+          <div class="progress">
+            <div class="progress-bar"></div>
+          </div>
+        </li>
+      </ul>
+     
+    </div>
+  </div> 
+</div>
+<!-- headend button  -->
+<div>
+  <div class="wifi-box">
+    <div>
+      <div class="click-icon" onclick="togglePopup('popup8')">
+        <div class="icons">
+          <i class="fa fa-angle-up" id="popup8-arrow1"></i>
+          <i class="fa fa-angle-down" id="popup8-arrow2"></i>
+      </div>
+      <p>Headend</p>
+      </div>
+    </div>
+    <div>
+      <div class="popup-dots">
+        <div onclick="togglePopup('popup8')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div></div>
+    </div>
+  </div> 
+  <div class="link-popup popup8" id="popup8">
+    <div class="progressbox" >
+      <ul class="progressbox-1">
+        <li>
+          
+            <h4>Intermadiate Headend</h4>
+            <div>
+                <span class="light-green-color"></span>
+                <span class="yellow-color"></span>
+                <span>Your Company</span>
+            </div>
+            <div class="second-colorbox">
+                <span class="dark-blue"></span>
+                <span>Similar Companies</span>
+            </div>
+            <h5>Suggestions</h5>
+        
+        </li>
+        <li class="progressbox-1-1">
+          <div class="progress">
+            <div class="progress-bar"></div>
+          </div>
+        </li>
+        <li class="progress-1-2">
+          <div class="progress">
+            <div class="progress-bar"></div>
+          </div>
+        </li>
+      </ul>
+      <ul class="progressbox-2">
+        <li>
+          
+          <h4>Fundamental Headend</h4>
+          <h5>Suggestions</h5>
+      
+      </li>
+      <li class="progressbox-1-1">
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+      </li>
+      <li class="progress-1-2">
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+      </li>
+      </ul>
+      <ul class="progressbox-3">
+        <li>
+          
+          <h4>Primer Headend</h4>
+          <h5>Suggestions</h5>
+      
+      </li>
+      <li class="progressbox-1-1">
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+      </li>
+      <li class="progress-1-2">
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+      </li>
+      </ul>
+      <ul class="progressbox-4">
+        <li>
+          
+          <h4>Advanced Headend</h4>
+          <h5>Suggestions</h5>
+      
+      </li>
+      <li class="progressbox-1-1">
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+      </li>
+      <li class="progress-1-2">
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+      </li>
+      </ul>
+    </div>
+  </div> 
+</div>
+<!-- circuit switched button  -->
+<div>
+  <div class="wifi-box">
+    <div>
+      <div class="click-icon"  onclick="togglePopup('popup9')">
+        <div class="icons">
+          <i class="fa fa-angle-up" id="popup9-arrow1"></i>
+          <i class="fa fa-angle-down" id="popup9-arrow2"></i>
+      </div>
+      <p>Circuit Switched Networks</p>
+      </div>
+    </div>
+    <div>
+      <div class="popup-dots">
+        <div onclick="togglePopup('popup9')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div></div>
+    </div>
+  </div> 
+  <div class="link-popup popup9" id="popup9">
+    <div class="progressbox" >
+      <ul class="progressbox-1">
+        <li>
+          
+            <h4>Fundamental Circuit Switched Networks</h4>
+            <div>
+                <span class="light-green-color"></span>
+                <span class="yellow-color"></span>
+                <span>Your Company</span>
+            </div>
+            <div class="second-colorbox">
+                <span class="dark-blue"></span>
+                <span>Similar Companies</span>
+            </div>
+            <h5>Suggestions</h5>
+        
+        </li>
+        <li class="progressbox-1-1">
+          <div class="progress">
+            <div class="progress-bar"></div>
+          </div>
+        </li>
+        <li class="progress-1-2">
+          <div class="progress">
+            <div class="progress-bar"></div>
+          </div>
+        </li>
+      </ul>
+      <ul class="progressbox-2">
+        <li>
+          
+          <h4>Intermadiate Circuit Switched Networks</h4>
+          <h5>Suggestions</h5>
+      
+      </li>
+      <li class="progressbox-1-1">
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+      </li>
+      <li class="progress-1-2">
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+      </li>
+      </ul>
+    </div>
+  </div> 
+</div>
+<!-- ethernet button  -->
+<div>
+  <div class="wifi-box">
+    <div>
+      <div class="click-icon" onclick="togglePopup('popup10')">
+        <div class="icons">
+          <i class="fa fa-angle-up" id="popup10-arrow1"></i>
+          <i class="fa fa-angle-down" id="popup10-arrow2"></i>
+      </div>
+      <p>Ethernet</p>
+      </div>
+    </div>
+    <div>
+      <div class="popup-dots">
+        <div onclick="togglePopup('popup10')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div></div>
+    </div>
+  </div> 
+  <div class="link-popup popup10" id="popup10">
+    <div class="progressbox" >
+      <ul class="progressbox-1">
+        <li>
+          
+            <h4>Fundamental Ethernet</h4>
+            <div>
+                <span class="light-green-color"></span>
+                <span class="yellow-color"></span>
+                <span>Your Company</span>
+            </div>
+            <div class="second-colorbox">
+                <span class="dark-blue"></span>
+                <span>Similar Companies</span>
+            </div>
+            <h5>Suggestions</h5>
+        
+        </li>
+        <li class="progressbox-1-1">
+          <div class="progress">
+            <div class="progress-bar"></div>
+          </div>
+        </li>
+        <li class="progress-1-2">
+          <div class="progress">
+            <div class="progress-bar"></div>
+          </div>
+        </li>
+      </ul>
+      <ul class="progressbox-2">
+        <li>
+          
+          <h4>Primer Ethernet</h4>
+          <h5 class="yellow-head">Suggestions</h5>
+      
+      </li>
+      <li class="progressbox-1-1">
+        <div class="progress">
+          <div class="progress-bar yellow-bar"></div>
+        </div>
+      </li>
+      <li class="progress-1-2">
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+      </li>
+      </ul>
+      <ul class="progressbox-3">
+        <li>
+          
+          <h4>Intermadiate Ethernet</h4>
+          <h5 class="yellow-head">Suggestions</h5>
+      
+      </li>
+      <li class="progressbox-1-1">
+        <div class="progress">
+          <div class="progress-bar yellow-bar"></div>
+        </div>
+      </li>
+      <li class="progress-1-2">
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+      </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- end  -->
+    </div>
+  </div>
+
+</div>
+  </div>
+</div>
+    </section>
+  </div>
+  
+  
+
+     
+    </section>
+    <section class="footer">
+<div>
+  <div class="top-footer">
+    <div class="footer-container">
+      <div class="primary-container">
+        
+        <div class="first-list list">
+          <ul>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Change permissions</a></li>
+            <li><a href="#">Get transcript</a></li>
+            <li><a href="#">Billing Information</a></li>
+            <li><a href="#">More insights</a></li>
+        </ul>
+        </div>
+        <div class="second-list list">
+          <ul>
+            <li><a href="#">Learning</a></li>
+            <li><a href="#">Dashboard home</a></li>
+            <li><a href="#">Course dashboard</a></li>
+            <li><a href="#">Certification dashboard</a></li>
+            <li><a href="#">More dashboard</a></li>
+        </ul>
+        </div>
+        <div class="third-list list">
+          <ul>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Customer Support</a></li>
+          <li><a href="#">FAQs / resources</a></li>
+          <li><a href="#">Live Support chat</a></li>
+          <li><a href="#">Email SCTE</a></li>
+      </ul></div>
+        <div class="fourt-list list">
+          <ul>
+            <li><a href="#">Quicklinks</a></li>
+            <li><a href="#">Corporate dashboard</a></li>
+            <li><a href="#">Personal dashboard</a></li>
+            <li><a href="#">Chapter dashboard</a></li>
+            <li><a href="#">SCTE website</a></li>
+        </ul>
+        </div>
+        <div class="fifth-list list"><ul>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-apple"></i></a></li>
+          <li><a href="#"><i class="fa fa-play"></i></a></li>
+      </ul></div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-footer">
+    <div class="footer-text">
+      <ul>
+        <li><a href="#">140 philips Road,Exton PA 19341</a></li>
+        <li><a href="#">Toll-free: 800.542.5040</a></li>
+        <li><a href="#">Phone: 610.363.6888</a></li>
+        <li><a href="#">Fax: 610.8847237</a></li>
+        <li><img src="http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/text.png"></li>
+    </ul>
+    </div>
+  </div>
+</div>
+    </section>
+    <div class="specialbtns">
+        <span id="myUpDiv"  onclick="scrollPage(-700)"><i class="fa fa-caret-up"></i></span>
+        <span id="myBottomDiv"  onclick="scrollPage(700)"><i class="fa fa-caret-down"></i></span>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

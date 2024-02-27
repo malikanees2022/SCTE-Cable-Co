@@ -1,0 +1,37 @@
+@media (max-width:1320px) and (min-width:1200px){
+    
+    /* top boxes start  */
+    .test{
+        background: none;
+        height: auto;
+    }
+    .boxes-container .boxes .box1{
+background-color: #2dbf16;
+}
+.boxes-container .boxes .box2{
+    background-color: #f70065;
+}
+.boxes-container .boxes .box3{
+    background-color: #544e9f;
+}
+.boxes-container .boxes .box4{
+    background-color: #0075d5;
+}
+.boxes-container .boxes .box5{
+    background-color: #fcac2a;
+}
+.boxes-container >div{
+    gap: 0;
+    padding: 0;
+    margin-top: 0px;
+
+}
+.boxes-container .boxes >div{
+    width: 22%;
+    
+    padding: 35px 6px 20px 6px;
+}
+.number-box .middle sup {
+    top: -30px;
+}
+}

@@ -1,0 +1,52 @@
+
+*{
+    margin: 0;
+    pad: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.mainbox{
+    padding: 40px 40px 0 40px;
+    background: #444E68;
+    overflow: hidden;
+}
+.head{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), linear-gradient(223deg, rgba(96, 105, 126, 0.5), rgba(0, 0, 0, 0.5)), url(http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/polycable_header.png) no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    width: 100%;
+}
+.specialbtns{
+    position: fixed;
+    bottom: 19px;
+    left: 11px;
+    z-index: 2;
+    /* background-color: yellow; */
+}
+.specialbtns span{
+    width: 20px;
+    height: 20px;
+    color: #444E68;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4px;
+    cursor: pointer;
+    background: #31D6C4!important;
+}
+.specialbtns span:nth-child(2){
+    background: #5A6683;
+}
+
+.arrow-click{
+    display: none;
+}
+

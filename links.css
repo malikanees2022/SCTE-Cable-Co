@@ -1,0 +1,206 @@
+.links-section{
+        background: #323B52;
+        padding-bottom: 60px; 
+}
+.links-container{
+    padding: 0px!important;
+    margin: 0 auto;
+    width: 100%!important;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links-container .left-box{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    /* background-color: yellow; */
+}
+.links-container .left-box .style-pages{
+    position: relative;
+}
+.style-pages .header-text h1{
+    margin-left: 65px;
+    color: #444E68;
+    font-size: 62px;
+    font-family: 'Old Standard TT', serif;
+    padding-top: 10px;
+}
+.style-pages .chat-container{
+    padding: 40px 0px 0px 17px;
+}
+.chat-container .fade-right{
+    background: #444E68;
+    max-width: 415px;
+    position: relative;
+    margin-top: 34px;
+    /*  */
+}
+
+.chat-container .fade-right p{
+    color: #8D97B1;
+    font-size: 17px;
+    padding: 29px 88px 41px 56px;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    margin: 0 0 10px;
+}
+.chat-container .fade-right p span{
+    color: #c3cad8;
+}
+.chat-container .fade-right:after{
+    content: '';
+    border-left: 31px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 24px solid #444e68;
+    position: absolute;
+    left: 34px;
+    bottom: -24px;
+}
+.chat-container .fade-left{
+    background: #444E68;
+    max-width: 415px;
+    margin-left: 117px;
+    position: relative;
+    margin-top: 42px;
+   
+}
+
+
+.chat-container .fade-left p{
+    color: #8D97B1;
+    font-size: 17px;
+    padding: 29px 88px 41px 56px;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    margin: 0 0 10px;
+}
+
+.chat-container .fade-left p span{
+    color: #c3cad8;
+}
+.chat-container .fade-left p::after{
+    content: '';
+    border-left: 0px solid transparent;
+    border-right: 31px solid transparent;
+    border-top: 24px solid #404a62;
+    position: absolute;
+    right: 25px;
+    bottom: -24px;
+}
+.style-pages .image-container{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 80px;
+/* background-color: red; */
+width: 500px;
+margin-top: 80px;
+}
+.style-pages .image-container img{
+    vertical-align: middle;
+}
+
+.links-container .right-box{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  
+    margin-right: 20px;
+}
+
+.links-container .right-box .main-items{
+    position: relative;
+    width: 100%;
+}
+.main-items .items-container{
+    position: relative;
+    top: -225px;
+    width: 100%;
+}
+.main-items .items-container .header-text h1{
+    margin-left: 0px;
+    text-align: center;
+    color: #444E68;
+    font-size: 60px;
+    font-weight: 100;
+    font-family: 'Old Standard TT', serif;
+    padding-top: 20px;
+}
+.items-container .add-more{
+    color: #F2A424;
+    font-weight: 500;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5px;
+}
+.items-container .add-more .fa{
+    margin-right: 6px;
+}
+.items-container  .wifi-box{
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding: 0px 30px 0px 0px;
+    /* background-color: red; */
+    padding-right: 1px;
+}
+.wifi-box .click-icon{
+    cursor: pointer;
+    display: flex;
+    padding-left: 6px;
+}
+.wifi-box .icons{
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+
+}
+.wifi-box .icons .fa{
+    height: 14px;
+    font-weight: bold;
+    color: #329896;
+    transition: transform 0.5s ease-in-out;
+} 
+.arrow-up {
+    transform:  rotate(180deg);
+    margin-top: 2px;
+  }
+.wifi-box p{
+    padding-left: 10px;
+    margin-top: auto;
+    color: #ADB0B9;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 0 10px;
+    text-align: center;
+    padding-top: 6px;
+    
+}
+.wifi-box .popup-dots{
+    cursor: pointer;
+    overflow: hidden;
+    padding-top: 5px;
+    
+}
+.wifi-box .popup-dots>div{
+    display: flex;
+    flex-direction: column;
+    
+}
+.wifi-box .popup-dots span{
+    background: #ADB0B9;
+    width: 6px;
+    height: 6px;
+    border-radius: 10px;
+    margin: 1px;
+    float: left;
+    
+}

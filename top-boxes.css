@@ -1,0 +1,190 @@
+
+.boxes-container{
+    position: relative;
+    z-index: 14;
+    display: flex;
+    margin-top: 5px;
+    /* overflow: hidden; */
+    margin-bottom: 0;
+    padding-bottom: 0px;
+    /* background-color: red; */
+    /* background-color: red; */  
+}
+.test{
+    background-image: url(http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/all.svg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 320px;
+}
+
+.boxes-container >div{
+   width: 100%;
+   /* height: 100%; */
+   /* background-color: yellow; */
+   padding: 30px 10px;
+   display: flex;
+   justify-content: space-between;
+   gap: 20px;
+   margin-top: 20;
+   padding-bottom: 0px;
+   /* border: 2px solid black; */
+}
+.boxes-container .boxes >div{
+    background: transparent;
+    width: 20%;
+    height: 100%;
+    /* border: 2px solid red; */
+    padding-top: 55px;
+
+}
+.boxes .inner{
+    cursor: pointer;
+}
+/* .boxes-container .boxes .box1{
+background-color: #2dbf16;
+}
+.boxes-container .boxes .box2{
+    background-color: #f70065;
+}
+.boxes-container .boxes .box3{
+    background-color: #544e9f;
+}
+.boxes-container .boxes .box4{
+    background-color: #0075d5;
+}
+.boxes-container .boxes .box5{
+    background-color: #fcac2a;
+} */
+.box5{
+    padding-left: 10px;
+}
+.box1{
+    padding-right: 10px;
+}
+
+
+
+.boxes-container .boxes div .dots-box{
+    overflow: hidden;
+    /* height: 16px; */
+    cursor: pointer;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+}
+.boxes-container .boxes div .dots-box i{
+    color: #fff;
+    font-size: 16px;
+}
+.boxes-container .boxes div .dots-box span{
+    background: #fff;
+    width: 6px;
+    height: 6px;
+    border-radius: 10px;
+    margin: 1px;
+    float: left;
+    margin-top: 10px;
+    
+}
+.number-box .upper{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+    box-sizing: border-box;  
+    
+}
+.number-box .upper h6{
+    color: #f9f9f9;
+    font-size: 17px;
+    margin-top: 6px;
+    margin-bottom: 0px;
+    opacity: 0.7;
+    padding-top: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    width: 50%;
+    /* background-color: red; */
+}
+.number-box .upper h5{
+color: #fff;
+/* font-size: 35px; */
+font-family: 'Roboto', sans-serif;
+font-weight: 100;
+width: 100px;
+position: relative;
+/* background-color: red; */
+margin-right: 5px;
+}
+.number-box .upper h5 span{
+    font-size: 77px;
+    padding-left: 18px;
+}
+.number-box .upper h5 .extra{
+   font-size: 20px;
+   padding: 0;
+  
+}
+.number-box .upper h5 sup{
+    font-size: 38px;
+    position: absolute;
+    top: 1px; 
+    
+}
+.number-box .upper .extra2{
+    right: 20%;
+    font-size: 33px;
+}
+.number-box .middle {
+    font-size: 77px;
+    color: #fff;
+    opacity: 0.6;
+    position: relative;
+    font-family: 'Roboto', sans-serif;  
+    margin-top: -30px;
+}
+.number-box .middle h5{
+    font-weight: lighter;
+    opacity: 0.7;
+    font-size: 77px;
+}
+.number-box .middle .extra{
+    font-size: 20px;
+    margin-left: -20px;
+}
+.number-box .middle sup{
+    font-size: 33px;
+    position: relative;
+    right: 30px;
+    top: -30px;
+}
+.inner .bottom-text{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    
+}
+.inner .bottom-text p{
+    color: #fff;
+    font-size: 11px;
+    margin-bottom: 0px;
+    padding-top: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+}
+.inner .bottom-text img{
+    width: 15px;
+    height: 17px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.clickbox-icon{
+    display: none;
+}
+.box1 .dots-box i{
+    display: none;
+}
+.boxes .dots-box i:last-child{
+    display: none;
+}
