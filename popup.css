@@ -259,7 +259,7 @@ width: 103%;
 .item-4 .graph-container{
     margin-top: 20px;
     margin-bottom: 24px;
-    background-image: url(http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/graph5.svg);
+    background-image: url(./assets/graph5.svg);
     background-size: cover;
     width: 760px;
    display: none;

@@ -3,7 +3,7 @@
     position: relative; 
  }
 .charts-container{
-    background-image: url(http://scte-dashboard.s3-website-us-west-2.amazonaws.com/asset/grp.jpg);
+    background-image: url(./assets/grp.jpg);
     background-size: 116% 122%;
     background-position: 0 8%;
     margin-right: auto;
